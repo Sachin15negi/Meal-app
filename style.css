@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --tenne-tawny: #d65108;
+  --tenne-tawny-dark: #b54507;
+}
+
+.navbar {
+  width: 100%;
+  height: 10vh;
+  background-color: #d57d1f;
+}
+
+.navbar h1 {
+  font-size: 40px;
+  font-family: 'Titan One', cursive;
+  color: #3b2611;
+  margin-left: 5%;
+}
+
+nav {
+  color: white;
+  min-height: 10vh;
+  padding-left: 44%;
+  padding-right: 20%;
+}
+
+#content {
+  text-align: center;
+  margin-top: 3%;
+}
+
+#content p {
+  font-size: 20px;
+  color: #3b2611
+}
+
+#title {
+  font-size: 1.7rem;
+}
+
+#favorite-meals-link {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+#favorite-meals-link:hover {
+  color: #3b2611;
+}
+
+/* Main */
+main {
+  height: 90vh;
+  width: 100%;
+}
+
+.search-container {
+  margin: 1.2rem 0;
+  display: flex;
+  align-items: stretch;
+}
+
+#search-meal-input {
+  width: 25vw;
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  font-family: inherit;
+  outline: 0;
+  border: 1px solid var(--tenne-tawny);
+  color: var(--tenne-tawny);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+#search-meal-input::placeholder {
+  color: var(--tenne-tawny);
+}
+
+#search-button {
+  width: 100%;
+  width: 55px;
+  height: 55px;
+  font-size: 1.8rem;
+  background: var(--tenne-tawny);
+  color: #fff;
+  border: none;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -ms-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+}
+
+#meal,
+#favourite-meals-container {
+  width: 90%;
+  height: 600px;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.meal-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 30px;
+  width: 25%;
+  height: 100%;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.meal-img {
+  position: relative;
+}
+
+.meal-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin: auto;
+}
+
+.meal-name {
+  text-align: center;
+  height: 100px;
+  font-size: 0.8rem;
+}
+
+.meal-name h3 {
+  font-size: 1.3rem;
+  margin: 5% 0;
+}
+
+.meal-name a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: block;
+  margin-top: 20px;
+}
+
+.recipe-button:hover {
+  background: var(--tenne-tawny-dark);
+  color: white;
+}
+
+.recipe-button {
+  color: white;
+  height: 4vh;
+  width: 10vw;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  background-color: #d57d1f;
+}
+
+#fav-btn:hover {
+  background: var(--tenne-tawny-dark);
+}
+
+#fav-btn {
+  color: white;
+  height: 5vh;
+  width: 10vw;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  background-color: #d57d1f;
+}
+
+.favourite-button,
+.unfavourite-button {
+  margin: 5%;
+}
+
+/* Meal Details */
+
+#meal-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  border-radius: 10px;
+  width: 95%;
+  height: 95%;
+  overflow-y: scroll;
+  display: none;
+  padding: 2rem 0;
+  background-color: #d57d1f;
+  padding: 20px;
+}
+
+.show-recipe {
+  /* important used here to display the details page */
+  display: block !important;
+}
+
+.back-button {
+  background-color: #3d1601;
+  color: white;
+  margin-bottom: 20px;
+}
+
+#remove-btn {
+  color: white;
+  font-size: 16px;
+  height: 7vh;
+  width: 15vw;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  background-color: #d57d1f;
+}
+
+.recipe-title {
+  letter-spacing: 1px;
+  padding-bottom: 1rem;
+}
+
+.recipe-meal-img img {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
+
+.recipe-link {
+  margin: 1.4rem 0;
+  text-align: center;
+}
+
+.recipe-link a {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: all 0.2s linear;
+  text-decoration: none;
+}
+
+.recipe-link a:hover {
+  color: aquamarine;
+}
